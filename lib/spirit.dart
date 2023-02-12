@@ -1,4 +1,5 @@
 import 'package:artstruktura/drawer.dart';
+import 'package:artstruktura/justPlayList.dart';
 import 'package:artstruktura/models/musicCatModel.dart';
 import 'package:artstruktura/models/musicModel.dart';
 import 'package:flutter/material.dart';
@@ -120,8 +121,22 @@ class _SpiritState extends State<Spirit> {
                                           height: 140,
                                           child: InkWell(
                                             onTap: () {
-                                              launchInBrowser(
-                                                  tracks.audioUrl ?? "");
+                                              Navigator.push(
+                                                  context,
+                                                  new MaterialPageRoute(
+                                                      builder: (BuildContext
+                                                              context) =>
+                                                          new JustPlayList(
+                                                              snapshot.data!
+                                                                      .tracksList ??
+                                                                  [
+                                                                    TracksList(
+                                                                        trackName:
+                                                                            "Error",
+                                                                        id: -404)
+                                                                  ],
+                                                              index,
+                                                              categorieName)));
                                             },
                                             child: ClipRRect(
                                               borderRadius: BorderRadius.all(

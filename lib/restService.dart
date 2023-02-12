@@ -4,6 +4,7 @@ import 'package:artstruktura/models/healthModel.dart';
 import 'package:artstruktura/models/musicCatModel.dart';
 import 'package:artstruktura/models/musicModel.dart';
 import 'package:artstruktura/models/traingCatModel.dart';
+import 'package:artstruktura/models/constructorCatModel.dart';
 import 'package:http/http.dart' as http;
 import 'models/trainingExercisesModel.dart';
 import 'models/trainingsModel.dart';
@@ -251,5 +252,28 @@ class RestService {
     }
     client.close();
     return music;
+  }
+
+  static Future<constructorCatModel> getConstructorCategories() async {
+    var client = http.Client();
+    var url = Uri.http("51.250.39.117:8000", "/constructorCategories");
+    var constCatModel = constructorCatModel(
+        constructorCategories: [ConstructorCategories(constName: "Error")]);
+    try {
+      var response = await client.get(url);
+      if (response.statusCode == 200) {
+        var jsonString = response.body;
+        var jsonMap = json.decode(jsonString);
+        var constCatModel = constructorCatModel.fromJson(jsonMap);
+        client.close();
+        return constCatModel;
+      }
+    } catch (Exc) {
+      client.close();
+      return constructorCatModel(
+          constructorCategories: [ConstructorCategories(constName: "Error")]);
+    }
+    client.close();
+    return constCatModel;
   }
 }

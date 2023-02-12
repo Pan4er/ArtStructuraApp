@@ -1,3 +1,4 @@
+import 'package:artstruktura/constructor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'custom_icons.dart';
@@ -45,6 +46,9 @@ class _CupertinoStoreHomePageState extends State<CupertinoStoreHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.music_note),
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.construction_rounded),
+          ),
         ],
       ),
       tabBuilder: (context, index) {
@@ -65,6 +69,12 @@ class _CupertinoStoreHomePageState extends State<CupertinoStoreHomePage> {
             return CupertinoTabView(builder: (context) {
               return CupertinoPageScaffold(
                 child: Spirit(),
+              );
+            });
+          case 3:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: Constructor(),
               );
             });
           default:

@@ -1,8 +1,8 @@
-import 'package:artstruktura/drawer.dart';
+// ignore_for_file: file_names
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:better_video_player/better_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:glass_kit/glass_kit.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'RestService.dart';
