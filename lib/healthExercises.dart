@@ -69,9 +69,11 @@ class _HealthExercisesState extends State<HealthExercises> {
           body: Container(
               child: Scrollbar(
             controller: mainScrollController,
-            isAlwaysShown: true,
+            //isAlwaysShown: true,
+            trackVisibility: true,
             interactive: true,
-            hoverThickness: 30,
+            thickness: 30,
+            //hoverThickness: 30,
             child: ListView(
                 physics: BouncingScrollPhysics(),
                 controller: mainScrollController,

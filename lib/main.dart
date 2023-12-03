@@ -38,7 +38,7 @@ class StrukturaAppState extends State<StrukturaApp> {
     brightness: Brightness.dark,
     primaryColor: Colors.red,
 
-    primaryColorBrightness: Brightness.dark,
+
     canvasColor: Color.fromRGBO(34, 40, 49, 1),
 
     //scaffoldBackgroundColor: Colors.grey[850],
@@ -47,8 +47,7 @@ class StrukturaAppState extends State<StrukturaApp> {
       centerTitle: true,
       backgroundColor: Color.fromRGBO(34, 40, 49, 1),
     ),
-    accentColor: Colors.blue[500],
-    accentColorBrightness: Brightness.dark,
+    hintColor: Colors.blue[500],
   );
 
   late Box<int> settingsBox;

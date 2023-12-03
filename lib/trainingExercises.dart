@@ -73,9 +73,11 @@ class _TrainingExercisesState extends State<TrainingExercises> {
           body: Container(
               child: Scrollbar(
             controller: mainScrollController,
-            isAlwaysShown: true,
+            //isAlwaysShown: true,
+            thumbVisibility: true,
+            thickness: 30,
             interactive: true,
-            hoverThickness: 30,
+            //hoverThickness: 30,
             child: ListView(
                 physics: BouncingScrollPhysics(),
                 controller: mainScrollController,

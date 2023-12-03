@@ -154,13 +154,19 @@ class _ConstructorState extends State<Constructor> {
                           Padding(
                               padding:
                                   EdgeInsets.only(top: 80, left: 20, right: 20),
-                              child: OutlineButton(
-                                highlightColor: Colors.redAccent,
-                                highlightedBorderColor: Colors.redAccent,
-                                highlightElevation: 0.1,
-                                splashColor: Colors.redAccent,
-                                color: Colors.redAccent,
-                                borderSide: BorderSide(color: Colors.redAccent),
+                              child: OutlinedButton(
+                                /*
+                                style:
+                                ButtonStyle(
+                                  foregroundColor: Colors.redAccent,
+                                  shadowColor: Colors.deepOrange,
+                                  highlightedBorderColor: Colors.redAccent,
+                                  highlightElevation: 0.1,
+                                  splashColor: Colors.redAccent,
+                                  color: Colors.redAccent,
+                                  borderSide: BorderSide(color: Colors.redAccent),
+                                ),
+                                 */
                                 child: Center(
                                     child: SizedBox(
                                         width: 250,
